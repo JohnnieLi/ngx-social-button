@@ -1,10 +1,15 @@
+
+
+
 Social login/share buttons for Angular 6, 7, 8 
 
 ![Generic badge](https://img.shields.io/badge/build-passing-green.svg)
-![Generic badge](https://img.shields.io/badge/Angular-6-green.svg) AOT Compatible
+![Generic badge](https://img.shields.io/badge/Angular-6-green.svg)+ AOT Compatible
 
 ## Reference
 Original project : sabyasachibiswal https://github.com/sabyasachibiswal/angular5-social-login
+
+Last project: ng6-social-button  https://www.npmjs.com/package/ng6-social-button
 
 Built by using Angular6 **ng generate library**
 
@@ -23,7 +28,7 @@ Built by using Angular6 **ng generate library**
 
 ### Install via npm
 ```
-npm install --save ng6-social-button
+npm install --save ngx-social-button
 ```
 
 ### Import the module
@@ -35,9 +40,9 @@ There are two ways to import the module
 ...
  
 import {
-    Ng6SocialButtonModule,
+    NgxSocialButtonModule,
     SocialServiceConfig
-} from "ng6-social-button";
+} from "ngx-social-button";
 
 // Configs
 export function getAuthServiceConfigs() {
@@ -51,7 +56,7 @@ export function getAuthServiceConfigs() {
 @NgModule({
   imports: [
       ...
-      Ng6SocialButtonModule
+      NgxSocialButtonModule
   ],
   providers: [
       ...
@@ -70,11 +75,11 @@ export function getAuthServiceConfigs() {
 ...
  
 import {
-    Ng6SocialButtonModule,
+    NgxSocialButtonModule,
     FacebookLoginProvider,
     GoogleLoginProvid,
     SocialServiceConfig
-} from "ng6-social-button";
+} from "ngx-social-button";
 
 // Configs
 export function getAuthServiceConfigs() {
@@ -90,7 +95,7 @@ export function getAuthServiceConfigs() {
 @NgModule({
   imports: [
       ...
-      Ng6SocialButtonModule
+      NgxSocialButtonModule
   ],
   providers: [
       ...
@@ -115,7 +120,7 @@ export function getAuthServiceConfigs() {
 import { Component } from '@angular/core';
 import {
     SocialService
-} from "ng6-social-button";
+} from "ngx-social-button";
 @Component({
   selector: 'app-social',
   templateUrl: './social.component.html',
@@ -149,10 +154,7 @@ export class SocialComponent {
 
 ```html
 ...
-<facebook-login-button  (socialUser)="getSocialUser($event)"></facebook-login-button>
-
-<facebook-login-button  [style] = "'round'" (socialUser)="getSocialUser($event)"></facebook-login-button>
-
+<facebook-login-button  [style]="'round'" (socialUser)="getSocialUser($event)"></facebook-login-button>
 
 <facebook-share-button [share]="shareObj" ></facebook-share-button>
 
@@ -179,7 +181,7 @@ import {
     SocialService,
     FacebookLoginProvider,
     GoogleLoginProvider
-} from "ng6-social-button";
+} from "ngx-social-button";
 @Component({
   selector: 'app-social',
   templateUrl: './social.component.html',
@@ -245,7 +247,7 @@ export class SocialComponent {
 ## Login Buttons API
 | Property    |      Description                 |  Type                     |   Default               |
 |-------------|:--------------------------------:|--------------------------:|------------------------:|
-| (socialUser)|  trigger when signin done        | EventEmitter<{SocialUser}>|     -     |
+| (socialUser)|  trigger when signin done        | EventEmitter<{SocialUser}>|     -                   |
 | [scopes]    |  social custom scopes            |   [string]                |     facebook:['email', 'public_profile'] |
 |  [style] ?  |  change button style if be:'round'    |   [string]                |     -                   |
 
