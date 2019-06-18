@@ -5,9 +5,9 @@ import {SocialUser} from '../entities';
 @Component({
     selector: 'linkedin-login-button',
     template: `
-		<button class="btn-block loginBtn --linkedin"
+		<button [className]="style == 'round' ? 'social-btn linkedin' : 'button btn-block loginBtn --linkedin'"
 		        (click)="socialSignIn()" type="button">
-			Login with LinkedIn
+			{{style == 'round' ? '':  text ? text : 'Login with LinkedIn'}}
 		</button>
     `, styleUrls: ['./buttons.css'],
 
@@ -15,6 +15,8 @@ import {SocialUser} from '../entities';
 export class LinkedinLoginButton implements OnInit {
 
     @Input() size: string;
+    @Input() style: string;
+    @Input() text: string;
     @Input() scopes: [string];
     @Output() socialUser = new EventEmitter<SocialUser>();
 

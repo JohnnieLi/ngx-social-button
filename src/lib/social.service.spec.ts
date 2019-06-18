@@ -2,7 +2,7 @@ import { TestBed, inject } from '@angular/core/testing';
 
 import { SocialService } from './social.service';
 
-describe('Ng6SocialButtonService', () => {
+describe('NgxSocialButtonService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [SocialService]

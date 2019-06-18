@@ -9,4 +9,4 @@ export * from './lib/buttons/facebookLoginButton';
 export * from './lib/buttons/googleLoginButton';
 export * from './lib/buttons/linkedinLoginButton';
 export * from './lib/buttons/facebookSharingButton';
-export * from './lib/ng6-social-button.module';
+export * from './lib/ngx-social-button.module';

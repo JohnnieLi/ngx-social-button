@@ -117,3 +117,32 @@
 }
 
 
+
+.social-btn{
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+}
+
+
+.social-btn.facebook {
+    background-image: url("https://raw.githubusercontent.com/JohnnieLi/ngx-social-button/master/assets/facebook.png");
+}
+
+.social-btn.google {
+    background-image: url("https://raw.githubusercontent.com/JohnnieLi/ngx-social-button/master/assets/google.png");
+}
+
+.social-btn.linkedin {
+    background-image: url("https://raw.githubusercontent.com/JohnnieLi/ngx-social-button/master/assets/LinkedIn.png");
+}
+
+.social-btn.wechat {
+    background-image: url("https://github.com/JohnnieLi/ngx-social-button/blob/master/assets/wechat.png?raw=true");
+}
+
+

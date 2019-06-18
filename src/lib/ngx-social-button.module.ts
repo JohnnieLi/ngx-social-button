@@ -16,4 +16,4 @@ import {LinkedinSharingButton} from './buttons/linkedinSharingButton';
         FacebookSharingButton, LinkedinLoginButton,
         LinkedinSharingButton]
 })
-export class Ng6SocialButtonModule { }
+export class NgxSocialButtonModule { }
